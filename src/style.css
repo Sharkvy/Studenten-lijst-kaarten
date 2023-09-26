@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Ubuntu:ital,wght@1,500&display=swap');
+
+::selection {
+  background: #226b43;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.head-container {
+  display: flex;
+  flex-direction: row; /* change the direction to column */
+  justify-content: flex-start; /* align items to the top */
+  margin-top: 0;
+}
+.container-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-right: 2px solid black;
+  width: 20%;
+  height: auto;
+}
+
+.search-container{
+  position: relative;
+  width: 90%;
+  margin: 20px auto 0;
+}
+
+.search{
+  background-color: #34a0a4;
+  width: 100%;
+  height: 40px;
+  border-radius: 15px;
+  border: none;
+  padding: 0 40px 0 10px;
+}
+
+#search-icon{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.sort {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* move the sort controls below the search bar */
+}
+
+.sort-select{
+  background-color: #34a0a4;
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px; /* add margin to create space between the sort controls and the cards */
+  color: white;
+}
+
+.card {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: calc(50% - 10px); /* change the width to fit two cards per row */
+  max-width: 400px; /* add a max-width to prevent the cards from getting too large */
+  padding: 20px;
+  background-color: #184e77;
+  margin: 20px;
+  height: 200px;
+}
+
+.card-header {
+  background-color: #34a0a4;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.card-body {
+  padding: 5px;
+  
+}
+
+.sort-button{
+  background-color: #34a0a4;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.sort-text{
+  text-align: center;
+}
+
+.sort-button.active {
+  background-color: #184e77;
+  color: #fff;
+}
+
+
+.export {
+  margin-top: auto; /* push the button to the bottom */
+  margin-bottom: auto; /* add some margin to separate from the sort controls */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+.export-button {
+  background-color: #34a0a4;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  height: 30px;
+}
+
+.export-button:hover {
+  background-color: #226b43;
+}
+
+.btn{
+  background-color: #34a0a4;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  height: 30px;
+  margin-left: 10px;
+  font-size: smaller;
+}
+
+.pdf-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: #226b43;
+}
+
+@media only screen and (max-width: 1236px) {
+  .sort-button{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .head-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+.container-left {
+  width: 100%;
+  border-right: none;
+  border-bottom: 2px solid black;
+  height: 200px;
+}
+
+.search-container {
+  margin-top: 40px;
+}
+
+.sort {
+  top: 0; /* move the sort controls to the top */
+  margin-top: 10px; /* add some margin to separate from the search bar */
+}
+
+.card {
+  width: calc(100% - 40px); /* change the width to fit one card per row */
+  margin: 20px 0; /* remove the horizontal margin */
+}
+
+.sort-button {
+  align-items: center;
+}
+
+}
