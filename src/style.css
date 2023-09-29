@@ -141,12 +141,11 @@
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
   height: 30px;
 }
 
 .export-button:hover {
-  background-color: #226b43;
+  background-color: #184e77;
 }
 
 .btn{
@@ -171,7 +170,7 @@
 }
 
 .btn:hover {
-  background-color: #226b43;
+  background-color: #184e77;
 }
 
 @media only screen and (max-width: 1236px) {

@@ -75,23 +75,3 @@ sortButtons.forEach(button => {
   }
 });
 
-document.getElementById("export-pdf").addEventListener("click", function() {
-  // create a new jsPDF instance
-  var doc = new jsPDF();
-
-  // loop through each card and add it to the PDF
-  var cards = document.getElementsByClassName("card");
-  for (var i = 0; i < cards.length; i++) {
-    // get the card's HTML content
-    var cardHTML = cards[i].outerHTML;
-
-    // add the card's HTML content to the PDF
-    doc.html(cardHTML);
-    if (i < cards.length - 1) {
-      doc.addPage();
-    }
-  }
-
-  // save the PDF
-  doc.save("cards.pdf");
-});
