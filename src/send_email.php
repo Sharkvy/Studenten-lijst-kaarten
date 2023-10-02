@@ -7,6 +7,10 @@
 </head>
 <body>
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -37,9 +41,12 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = $smtp_port;
 
-    // Recipients
-    $mail->setFrom($_POST['email'], $_POST['name']);
-    $mail->addAddress('barrysteen12345@gmail.com', 'Barry Steen');
+    // Get the email address of the person whose card was clicked
+    $recipient_email = $_POST['email'];
+
+    // Set the recipient email address and name
+    $mail->addAddress($recipient_email);
+    $mail->addReplyTo($_POST['email'], $_POST['name']);
 
     // Content
     $mail->isHTML(true);

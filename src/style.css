@@ -179,41 +179,77 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
   }
 }
 
 @media only screen and (max-width: 768px) {
-
   .head-container{
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-.container-left {
-  width: 100%;
-  border-right: none;
-  border-bottom: 2px solid black;
-  height: 200px;
-}
-
-.search-container {
-  margin-top: 40px;
-}
-
-.sort {
-  top: 0; /* move the sort controls to the top */
-  margin-top: 10px; /* add some margin to separate from the search bar */
-}
-
-.card {
-  width: calc(100% - 40px); /* change the width to fit one card per row */
-  margin: 20px 0; /* remove the horizontal margin */
-}
-
-.sort-button {
-  align-items: center;
-}
-
+  .container-left {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid black;
+    height: 300px;
+  }
+  .search-container {
+    margin-top: 40px;
+  }
+  .sort {
+    top: 0; /* move the sort controls to the top */
+    margin-top: 10px; /* add some margin to separate from the search bar */
+  }
+  .card {
+    width: calc(100% - 40px); /* change the width to fit one card per row */
+    margin: 20px 0; /* remove the horizontal margin */
+  }
+  .sort-button {
+    align-items: center;
+  }
+  .export {
+    margin-top: auto; /* push the button to the bottom */
+    margin-bottom: auto; /* add some margin to separate from the sort controls */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .export-button {
+    background-color: #34a0a4;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    height: 30px;
+    margin-top: 20px;
+  }
+  .export-button:hover {
+    background-color: #184e77;
+  }
+  .btn {
+    background-color: #34a0a4;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    height: 30px;
+    margin-left: 10px;
+    font-size: smaller;
+    margin-top: 20px;
+  }
+  .pdf-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn:hover {
+    background-color: #184e77;
+  }
 }

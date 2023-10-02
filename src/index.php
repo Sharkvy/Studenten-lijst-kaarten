@@ -30,10 +30,10 @@ $count = mysqli_num_rows($result);
 
     <!-- add the export button -->
     <div class="export">
-      <form method="post" action="./export.php">
+      <form class="pdf-form" method="post" action="./export.php">
         <button type="submit" name="export" class="export-button">Export as CSV</button>
       </form>
-      <form action="./pdf.php" class="pdf-form"method="post">
+      <form action="./pdf.php" class="pdf-form" method="post">
       <a href="./pdf.php" class="btn">Exporteer naar PDF</a>
       </form>
     </div>
@@ -54,7 +54,9 @@ $count = mysqli_num_rows($result);
         <p class="card-info" id="telefoonnummer-<?php echo $row['ID']; ?>" style="display: none;">Telefoonnummer: <?php echo $row['Telefoonnummer']; ?></p>
       </div>
       <div class="card-body">
-        <p class="card-info" id="email-<?php echo $row['ID']; ?>" style="display: none;">Email: <a href="./forum.php"<?php echo $row['Email']; ?>><?php echo $row['Email']; ?></a></p>
+        <p class="card-info" id="email-<?php echo $row['ID']; ?>" style="display: none;">
+          Email: <a href="./forum.php?email=<?php echo urlencode($row['Email']); ?>"><?php echo $row['Email']; ?></a>
+        </p>
       </div>
     </div>
   <?php endwhile; ?>
@@ -66,10 +68,3 @@ $count = mysqli_num_rows($result);
 <script src="./script.js"></script>
 </html>
 
-
-
-
-
-
-
-        
