@@ -49,9 +49,9 @@ try {
 
     // Send the email
     $mail->send();
-    echo 'Message has been sent';
+    echo 'Message has been sent. <a href="./index.php">Go back to homepage</a>';
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    echo 'Message could not be sent. <button onclick="window.location.href=\'./forum.php\'">Go back to forum</button>';
 }
 ?>
 </body>
